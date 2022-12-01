@@ -26,6 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-7ppocbnx@w71dcuinn*t^_mzal
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# edited to see if this works
 ALLOWED_HOSTS = ['https://pollard-demo.azurewebsites.net/']
 
 if 'CODESPACE_NAME' in os.environ:
