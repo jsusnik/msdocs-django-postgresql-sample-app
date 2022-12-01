@@ -38,6 +38,7 @@ def add_restaurant(request):
         name = request.POST['restaurant_name']
         street_address = request.POST['street_address']
         description = request.POST['description']
+        food_category = request.POST['food_category']
     except (KeyError):
         # Redisplay the question voting form.
         return render(request, 'restaurant_review/add_restaurant.html', {
@@ -48,6 +49,7 @@ def add_restaurant(request):
         restaurant.name = name
         restaurant.street_address = street_address
         restaurant.description = description
+        restaurant.food_category = food_category
         Restaurant.save(restaurant)
                 
         return HttpResponseRedirect(reverse('details', args=(restaurant.id,)))
