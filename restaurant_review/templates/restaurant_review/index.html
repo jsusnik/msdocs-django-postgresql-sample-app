@@ -50,6 +50,7 @@
               <tr>
                   <th>Name</th>
                   <th>Rating</th>
+                  <th>Food Category</th>
                   <th class="text-end">Details</th>
               </tr>
           </thead>
@@ -58,6 +59,7 @@
                   <tr>
                       <td>{{ restaurant.name }}</td>
                       <td>{% star_rating restaurant.avg_rating restaurant.review_count   %}   </td>
+                      <td>{{ restaurant.food_category }} </td>
                       <td class="text-end"><a href="{% url 'details' restaurant.id %}" class="btn btn-sm btn-primary">Details</a></td>
                   </tr>
               {% endfor %}
